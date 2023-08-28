@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .numbers{
+            width: 500px;
+            height: 500px;
+            text-align: start;
+            background: rgb(231, 217, 231);
+            padding:  1%;
+            margin: 10%;
+            border: 3px solid purple;
+            border-radius:20px;
+            box-shadow: 40px 40px 10px gray;
+            display: grid;
+            justify-content: center;
+            letter-spacing: 2px;
+            word-spacing: 3px;
+            line-height: 40px;
+            font-size: 22px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="numbers" class=numbers></div>
+
+    <script>
+       var getNumber = prompt('Bir sayı aralığı giriniz')
+        const numbersDiv = document.getElementById("numbers");
+
+        for (let i = 0; i <= getNumber; i++) {
+            if (i % 2 == 0) {
+                numbersDiv.innerHTML += i + ' Bir tam sayıdır <br>';
+            } else {
+                numbersDiv.innerHTML += i + ' Bir tek sayıdır <br>';
+            }
+
+        }
+    </script>
+</body>
+
+</html>

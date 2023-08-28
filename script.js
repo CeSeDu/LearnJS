@@ -85,6 +85,8 @@ console.clear();
 
 //!Fourt Subject
 
+
+
 //?Tür Dönüşümü
 
 //Stirng to Number
@@ -580,4 +582,330 @@ default:
 
 console.clear();
 
+// // var tirafigeCikis = new Date('04/20/2018');
+// // tirafigeCikis.setHours(0,0,0,0);
+// // var trafikteMs = Date.now() - tirafigeCikis.getTime();
+// // var trsfiktekiGun = Math.floor(trafikteMs/(1000*60*60*24));
 
+// // if(trsfiktekiGun<=365){
+// //   console.log('1. servis zamanı');
+// // }else if(trsfiktekiGun>365 && trsfiktekiGun<=365*2){
+// //   console.log('2.Servis Zamanı');
+// // }else if(trsfiktekiGun>365*2 && trsfiktekiGun <= 365*3){
+// //   console.log('3.Servis Zamanı')
+// // }else{
+// //   console.log('Bİlinmeyen Süre');
+// // }
+
+// // console.log(trsfiktekiGun);
+
+
+// var result = prompt("Who's there ?");
+
+// if(result == 'cancel'){
+//   console.log('cencalled');
+// }else if(result == 'admin'){
+
+//   var password = prompt('Enter your password :');
+
+//   if(password == 'cancel'){
+//     console.log('canselled');
+//   }else if(password == '1234'){
+//     console.log('welcome admin');
+//   }
+
+ 
+// }else{
+// alert('ı dont know you');
+// }
+ console.clear();
+
+ //?Objects Literals
+
+ let names4 = ['Çınar','Turan',1]
+
+ let person = {
+  firstName :'çınar',
+  lastname :'Turan',
+  age: 7,
+  hobbies :['music','game'],
+  adress: {
+    city: 'kocaeli',
+    country : 'Türkiye'
+  },
+  getBirthYear : function(){
+    return 2018- this.age;
+  }
+
+ };
+
+ val8 = person.firstName;
+ val8 = person.lastname;
+ val8 = person['firstName'];
+ val8 = person.hobbies[1];
+ val8 = person.getBirthYear();
+
+ console.log(val8);
+ console.log(typeof person)
+
+
+ let people = [ 
+              {firstName : ' Çınar',lastname:'turna'},
+              {firstName : ' Sena',lastname:'turna'},
+              {firstName : ' Seda',lastname:'turna'}
+          ];
+
+val = people[2];
+val = people[2].firstName;
+val = people[0].lastname;
+
+for(let i=0; i<people.length;i++){
+  console.log(people[i].firstName);
+}
+
+
+
+var aracBilgileri = [{
+  id: 'bmw116d_123',
+  model:'bmw 116d',
+  yil:2015,
+  renk:'Beyaz',
+    servisKayıtları:[
+      {
+        id:'bmw116d_123_1',
+        tarih: '20.01.2016',
+        km:'13000',
+        ucret:900,
+         detay:[
+            {
+              id:'bmw116d_123_1_1',
+              aciklama:'yağ değişimi ücret',
+              ucret: 300
+            },
+            {
+              id:'bmw116d_123_1_1',
+              aciklama:'Filtre değişimi ücret',
+              ucret: 300
+            },
+            {
+              id:'bmw116d_123_1_1',
+              aciklama:'fren hidroliği ücret',
+              ucret: 300
+            }
+          ]
+      },
+      {
+        id:'bmw116d_123_2',
+        tarih: '20.01.2017',
+        km:'28000',
+        ucret:1800,
+        detay:[
+          {id:'bmw116d_123_2_1',aciklama:'yağ değişimi ücret',ucret: 350},
+          {id:'bmw116d_123_2_1',aciklama:'Filtre değişimi ücret',ucret: 300},
+          {id:'bmw116d_123_2_1',aciklama:'fren hidroliği ücret',ucret: 303},
+          {id:'bmw116d_123_2_1',aciklama:'balaata değişimi ücret',ucret: 380}
+        ]
+      }
+    ]
+},
+{
+  id: 'bmw118i_123',
+  model:'bmw 118i',
+  yil:2015,
+  renk:'Beyaz',
+    servisKayıtları:[
+      {
+        id:'bmw118d_123_1',
+        tarih: '20.01.2016',
+        km:'13000',
+        ucret:900,
+         detay:[
+            {
+              id:'bmw118d_123_1_1',
+              aciklama:'yağ değişimi ücret',
+              ucret: 300
+            },
+            {
+              id:'bmw118d_123_1_1',
+              aciklama:'Filtre değişimi ücret',
+              ucret: 300
+            },
+            {
+              id:'bmw118d_123_1_1',
+              aciklama:'fren hidroliği ücret',
+              ucret: 300
+            }
+          ]
+      },
+      {
+        id:'bmw118d_123_2',
+        tarih: '20.01.2017',
+        km:'28000',
+        ucret:1800,
+        detay:[
+          {id:'bmw118d_123_2_1',aciklama:'yağ değişimi ücret',ucret: 350},
+          {id:'bmw118d_123_2_1',aciklama:'Filtre değişimi ücret',ucret: 300},
+          {id:'bmw118d_123_2_1',aciklama:'fren hidroliği ücret',ucret: 303},
+          {id:'bmw118d_123_2_1',aciklama:'balaata değişimi ücret',ucret: 380}
+        ]
+      }
+    ]
+},
+{
+  id: 'bmw330d_123',
+  model:'bmw 320d',
+  yil:2015,
+  renk:'Beyaz',
+    servisKayıtları:[
+      {
+        id:'bmw320d_123_1',
+        tarih: '20.01.2016',
+        km:'13000',
+        ucret:900,
+         detay:[
+            {
+              id:'bmw320d_123_1_1',
+              aciklama:'yağ değişimi ücret',
+              ucret: 300
+            },
+            {
+              id:'bmw320d_123_1_1',
+              aciklama:'Filtre değişimi ücret',
+              ucret: 300
+            },
+            {
+              id:'bmw320d_123_1_1',
+              aciklama:'fren hidroliği ücret',
+              ucret: 300
+            }
+          ]
+      },
+      {
+        id:'bmw320d_123_2',
+        tarih: '20.01.2017',
+        km:'28000',
+        ucret:1800,
+        detay:[
+          {id:'bmw320d_123_2_1',aciklama:'yağ değişimi ücret',ucret: 350},
+          {id:'bmw320d_123_2_1',aciklama:'Filtre değişimi ücret',ucret: 300},
+          {id:'bmw320d_123_2_1',aciklama:'fren hidroliği ücret',ucret: 303},
+          {id:'bmw320d_123_2_1',aciklama:'balaata değişimi ücret',ucret: 380}
+        ]
+      }
+    ]
+},
+];
+
+console.log(aracBilgileri[0]);
+console.log(aracBilgileri[0].id);
+console.log(aracBilgileri[0].model);
+console.log(aracBilgileri[0].renk);
+console.log(aracBilgileri[0].servisKayıtları);
+console.log(aracBilgileri[0].servisKayıtları[0]);
+console.log(aracBilgileri[0].servisKayıtları[0].ucret);
+console.log(aracBilgileri[0].servisKayıtları[0].detay);
+console.log(aracBilgileri[0].servisKayıtları[0].id);
+
+
+
+console.clear();
+
+
+//?Loops
+
+//For loop
+
+for(let i=1; i<=10; i++){
+  if(i==3){
+    console.log('en sevdiğim rakam :' +i);
+    continue;
+  }
+  if(i==6){
+    console.log('en sevmediğim rakam 6 :');
+    break;
+  }
+  console.log(i);
+}
+
+console.clear();
+
+//While loop
+
+// let i=0;
+// while(i<10){
+//   console.log(i);
+//   i++;
+// }
+
+//do while loop
+
+// let ea=0;
+// do{
+//   console.log(ea);
+//   ea++;
+// }while(ea<10);
+
+let sonuc=1;
+for (let i=10;i>0;i--){
+  if(i%2==0){
+    sonuc*=i;
+  }
+}
+
+console.log(sonuc);//1'den 10'a kadar olan tam sayıların toplamını bulduk
+
+console.clear();
+
+//loops in array & objects
+
+let carss =['BMW','Mercedes','Toyota'];
+let peoples =[
+  {firstName:'ada',lastname:'bilge'},
+  {firstName:'ahu',lastname:'bilge'},
+  {firstName:'asu',lastname:'bilge'}
+];
+
+for(let i=0; i<carss.length;i++){
+  console.log(carss[i]);
+}
+
+//For in
+
+for(let i in carss){
+  console.log(`index : ${i} value : ${cars[i]}`);
+}
+//arrays
+for(let i in peoples){
+  console.log(`index : ${i} valu : ${peoples[i].firstName}`);
+} 
+
+//foreach
+
+carss.forEach(function(item){
+  console.log(item);
+});
+
+//arrays
+
+peoples.forEach(function(item){
+  console.log(item.firstName);
+});
+
+//map : returns an array
+
+let vaal =  people.map(function(item){
+  return item.firstName + ' ' + item.lastname;
+});
+
+console.log(vaal);
+
+console.clear();
+
+let numbersss = [1,5,6,8,10];
+
+let nuum = numbersss.map(function(n){
+  return n*n;
+});
+console.log(nuum);
+
+console.clear();
