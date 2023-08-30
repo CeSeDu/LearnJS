@@ -901,11 +901,115 @@ console.log(vaal);
 
 console.clear();
 
-let numbersss = [1,5,6,8,10];
+// // let numbersss = [1,5,6,8,10];
 
-let nuum = numbersss.map(function(n){
-  return n*n;
-});
-console.log(nuum);
+// // let nuum = numbersss.map(function(n){
+// //   return n*n;
+// // });
+// // console.log(nuum);
 
 console.clear();
+
+//!Functions
+
+function ageCalculator(brithyear){
+  return 2023 - brithyear;
+}
+let ageSena = ageCalculator(2002);
+let ageIkbal = ageCalculator(2005);
+let ageSare = ageCalculator(2015);
+
+console.log(ageSare);
+console.log(ageIkbal);
+console.log(ageSena);
+
+
+function retirementAgeCalculator(brithyear,name){
+  let age = ageCalculator(brithyear);
+  let retirement = 65 - age;
+
+  if(retirement>0){
+    console.log(`${name} emekli olmana ${retirement} yıl kaldı.`);
+  }else{
+    console.log('Zaten emekli oldunuz');
+  }
+}
+
+retirementAgeCalculator(2002,'Sena');
+retirementAgeCalculator(2005,'İkbal');
+retirementAgeCalculator(1015,'Sare');
+
+//!Function Declarations
+
+function sum(a,b){
+  var c = a + b;
+  return c;
+}
+console.log(sum(10,20));
+
+//!Function Expressions
+
+const sum1 = function(a=0,b=0){
+  var c = a + b;
+  return c;
+}
+
+function args(){
+  console.log(arguments);
+}
+args(10,20,30);
+
+console.log(sum1(30,66));
+console.log(sum1(30));
+
+function sumAll(){
+  var total = 0;
+  for(let i =0; i<arguments.length;i++){
+    total += arguments[i];
+  }
+  return total;
+}
+
+console.log(sumAll(10,20,30,10,30));
+
+var accountA = {
+  name :' Sena Durmuş',
+  accountNo : '12345678',
+  balance : 2000,
+  additionalAccount : 1000
+}
+var accountB = {
+  name :' İkbal Durmuş',
+  accountNo : '12345679',
+  balance : 3000,
+  additionalAccount : 2000
+}
+
+function withdrawMoney(account,amount){
+  console.log(`Merhaba ${account.name}`);
+
+  if(account.balance >= amount){
+    account.balance = account.balance - amount;
+    console.log('paranızı alabilirsiniz');
+  }else{
+    var total = account.balance + account.additionalAccount;
+
+      if(total>=amount){
+        if(confirm('ek hesabınızı kullanmak ister misiniz?')){
+          console.log('paranızı alabilirsiniz.');
+          var balance = account.balance;
+          var additionalAccount = amount - balance;
+          account.balance = 0;
+          account.additionalAccount = account.additionalAccount - additionalAccount;
+
+        }else{
+          console.log(`${account.accountNo} nolu hesabınızda ${amount} bulunmamaktadır`);
+        }
+      }else{
+        console.log('yetersiz bakiye');
+      }
+  }
+}
+
+withdrawMoney(accountA,2000);
+withdrawMoney(accountA,1100);
